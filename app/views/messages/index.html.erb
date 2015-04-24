@@ -6,7 +6,7 @@
     <th>To</th>
     <th>From</th>
     <th>Html body</th>
-    <th>Text body</th>
+    <!-- <th>Text body</th> -->
     <th></th>
     <th></th>
     <th></th>
@@ -17,8 +17,8 @@
     <td><%= message.subject %></td>
     <td><%= message.to %></td>
     <td><%= message.from %></td>
-    <td><%= message.html_body %></td>
-    <td><%= message.text_body %></td>
+    <td><%= message.html_body.html_safe %></td>
+    <!-- <td><%= message.text_body.html_safe %></td> -->
     <td><%= link_to 'Show', message %></td>
     <td><%= link_to 'Edit', edit_message_path(message) %></td>
     <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
